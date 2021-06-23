@@ -1,0 +1,20 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using DevExpress.Blazor
+@typeparam TData
+@typeparam TValue
+
+<DxTagBox Data="@ComponentModel.Data" 
+          Values="ComponentModel.Values" 
+          ValueFieldName="@ComponentModel.ValueFieldName"
+          TextFieldName="@ComponentModel.TextFieldName"
+          NullText="@ComponentModel.NullText"
+          ReadOnly="@ComponentModel.ReadOnly"
+          @attributes="@ComponentModel.Attributes"
+          ValuesChanged="@ComponentModel.ValuesChanged"
+          ClearButtonDisplayMode="@ComponentModel.ClearButtonDisplayMode"></DxTagBox>
+
+@code {
+    [Parameter]
+    public TagBoxModel<TData, TValue> ComponentModel { get; set; }
+    public static RenderFragment Create(TagBoxModel<TData, TValue> componentModel) =>@<TagBoxRenderer ComponentModel=@componentModel />;
+}
