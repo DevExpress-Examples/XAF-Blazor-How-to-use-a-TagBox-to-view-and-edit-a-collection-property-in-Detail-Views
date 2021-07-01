@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DevExpress.ExpressApp;
+using DevExpress.ExpressApp.Blazor.Components.Models;
 using DevExpress.ExpressApp.Blazor.Editors;
 using DevExpress.ExpressApp.Blazor.Editors.Adapters;
 using DevExpress.ExpressApp.DC;
@@ -14,7 +15,7 @@ namespace TagBoxPropertyEditorSample.Module.Blazor.Editors {
         public TagBoxPropertyEditor(Type objectType, IModelMemberViewItem model) : base(objectType, model) { }
         protected override bool IsMemberSetterRequired() => false;
         protected override IComponentAdapter CreateComponentAdapter() {
-            TagBoxModel<DataItem<string>, string> componentModel = new TagBoxModel<DataItem<string>, string>();
+            DxTagBoxModel<DataItem<string>, string> componentModel = new DxTagBoxModel<DataItem<string>, string>();
             List<DataItem<string>> data = new List<DataItem<string>>();
             IObjectSpace objectSpace = View.ObjectSpace;
             ITypeInfo itemTypeInfo = MemberInfo.ListElementTypeInfo;
@@ -26,10 +27,10 @@ namespace TagBoxPropertyEditorSample.Module.Blazor.Editors {
             componentModel.Data = data;
             componentModel.ValueFieldName = nameof(DataItem<string>.Value);
             componentModel.TextFieldName = nameof(DataItem<string>.Text);
-            return new TagBoxAdapter<DataItem<string>, string>(componentModel);
+            return new DxTagBoxAdapter<DataItem<string>, string>(componentModel);
         }
         protected override void ReadValueCore() {
-            if(Control is TagBoxAdapter<DataItem<string>, string> adapter && PropertyValue is IList propertyList) {
+            if(Control is DxTagBoxAdapter<DataItem<string>, string> adapter && PropertyValue is IList propertyList) {
                 List<string> values = new List<string>();
                 IObjectSpace objectSpace = View.ObjectSpace;
                 foreach(object obj in propertyList) {
@@ -40,7 +41,7 @@ namespace TagBoxPropertyEditorSample.Module.Blazor.Editors {
             }
         }
         protected override void WriteValueCore() {
-            if(Control is TagBoxAdapter<DataItem<string>, string> adapter && PropertyValue is IList propertyList) {
+            if(Control is DxTagBoxAdapter<DataItem<string>, string> adapter && PropertyValue is IList propertyList) {
                 IObjectSpace objectSpace = View.ObjectSpace;
                 List<object> actualObjects = new List<object>();
                 if(adapter.ComponentModel.Values != null) {
