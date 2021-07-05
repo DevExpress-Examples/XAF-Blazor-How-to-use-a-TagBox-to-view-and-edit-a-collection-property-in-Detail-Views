@@ -2,7 +2,7 @@
 
 ## Scenario
 
-There are a couple of child records, and it is required to show all available records in a compact manner, and link and unlink them from the master object quickly (for example, with check boxes or tokens/tags). When an item is selected, this means that this record is associated with the master object.
+There are a couple of child records, and it is required to display all available records in a compact manner, and link and unlink them from the master object quickly (for example, with check boxes or tokens/tags). When an item is selected, this means that this record is associated with the master object.
 
 ## Solution
 
@@ -18,9 +18,9 @@ To simplify this task, we used our built-in Component Model (DxTagBoxModel), Com
 
 Create a **BlazorPropertyEditorBase** class descendant and follow the steps listed below:
 
-**Step 1.** Apply [PropertyEditorAttribute](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Editors.PropertyEditorAttribute.-ctor(System.Type-System.String-System.Boolean)) to the editor and set the first attribute parameter to **IList** and the **isDefaultEditor** parameter to **false**. With these values, you can choose this Property Editor in the **Model Editor** for a collection, and this editor is not marked as default.
+**Step 1.** Apply [PropertyEditorAttribute](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Editors.PropertyEditorAttribute.-ctor(System.Type-System.String-System.Boolean)) to the editor and set the first attribute parameter to **IList** and the **isDefaultEditor** parameter to **false**. With these values, you can choose this Property Editor for a collection in the **Model Editor** , and this editor will not be marked as default.
 
-**Step 2.** Override the **CreateComponentAdapter** method. In this method, create a component model, create a DataItem<string> collection, fill it with object handles using the [IObjectSpace.GetObjectHandle](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.IObjectSpace.GetObjectHandle%28System.Object%29) method, and then assign this collection to the component model's ***Data*** property. Then, specify the component model's ***ValueFieldName*** and ***TextFieldName*** properties. They are used to bind the ***DxTagBox*** component properly.
+**Step 2.** Override the **CreateComponentAdapter** method. In this method, create a component model, create a DataItem<string> collection, populate it with object handles using the [IObjectSpace.GetObjectHandle](https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.IObjectSpace.GetObjectHandle%28System.Object%29) method, and then assign this collection to the component model's ***Data*** property. Then, specify the component model's ***ValueFieldName*** and ***TextFieldName*** properties. They are used to bind the ***DxTagBox*** component.
 
 **Step 3.** Override the **ReadValueCore** method. This method is required to obtain a collection of values from a PropertyValue, loop through this collection, and update your component model's data.
 
