@@ -35,3 +35,6 @@ Create a **BlazorPropertyEditorBase** class descendant and follow the steps list
 
 * [TagBoxPropertyEditor.cs](./TagBoxPropertyEditorSample.Module.Blazor/Editors/TagBoxPropertyEditor.cs)
 <!-- default file list end -->
+  
+***See also:***  
+[How to represent a collection property using a checked list box](https://supportcenter.devexpress.com/ticket/details/e1807)
