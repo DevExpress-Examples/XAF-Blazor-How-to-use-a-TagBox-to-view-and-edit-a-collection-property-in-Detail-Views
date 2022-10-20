@@ -35,11 +35,9 @@ Create a **BlazorPropertyEditorBase** class descendant and follow the steps list
 
 **Step 6.** Optional. You may wish to slightly customize the Detail View layout for better appearance by following recommendations described at [Detail View Layout Customization](https://docs.devexpress.com/eXpressAppFramework/112817/ui-construction/views/layout/view-items-layout-customization).
 
-<!-- default file list -->  
-*Files to look at*: 
+## Files to Review
 
 * [TagBoxPropertyEditor.cs](./TagBoxPropertyEditorSample.Module.Blazor/Editors/TagBoxPropertyEditor.cs)
-<!-- default file list end -->
-  
-***See also:***  
-[How to represent a collection property using a checked list box](https://supportcenter.devexpress.com/ticket/details/e1807)
+
+## More Examples
+- [How to represent a collection property using a checked list box](https://github.com/DevExpress-Examples/XAF_how-to-represent-a-collection-property-using-a-checked-list-box-e1807)
