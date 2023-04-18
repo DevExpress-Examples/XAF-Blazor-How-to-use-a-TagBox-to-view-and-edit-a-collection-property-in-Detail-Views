@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems NavigationStyle="Accordion" />
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="22.2.5.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views DefaultListEditor="DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor">
+    <DetailView Id="Department_DetailView">
+      <Items>
+        <PropertyEditor Id="EmployeeCollection" PropertyEditorType="TagBoxPropertyEditorSample.Module.Blazor.Editors.TagBoxPropertyEditor" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Employee_DetailView">
+      <Items>
+        <PropertyEditor Id="MyTaskCollection" PropertyEditorType="TagBoxPropertyEditorSample.Module.Blazor.Editors.TagBoxPropertyEditor" />
+      </Items>
+    </DetailView>
+    <DetailView Id="MyTask_DetailView">
+      <Items>
+        <PropertyEditor Id="EmployeeCollection" PropertyEditorType="TagBoxPropertyEditorSample.Module.Blazor.Editors.TagBoxPropertyEditor" />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>
