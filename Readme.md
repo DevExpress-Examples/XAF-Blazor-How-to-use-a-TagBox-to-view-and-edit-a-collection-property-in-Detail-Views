@@ -35,7 +35,7 @@ Create a `BlazorPropertyEditorBase` class descendant and follow the steps listed
 
 ## Files to Review
 
-* [TagBoxPropertyEditor.cs](./TagBoxPropertyEditorSample.Module.Blazor/Editors/TagBoxPropertyEditor.cs)
+* [TagBoxPropertyEditor.cs](./CS/EFCore/TagBoxEditorEF/TagBoxEditorEF.Blazor.Server/Editors/TabBoxPropertyEditor/TagBoxPropertyEditor.cs) 
 
 ## More Examples
 - [How to represent a collection property using a checked list box](https://github.com/DevExpress-Examples/XAF_how-to-represent-a-collection-property-using-a-checked-list-box-e1807)
