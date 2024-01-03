@@ -7,6 +7,12 @@
 
 There are a couple of child records, and it is required to display all available records in a compact manner, and link and unlink them from the master object quickly (for example, with check boxes or tokens/tags). When an item is selected, this means that this record is associated with the master object.
 
+
+> **Note**  
+> We created this example only for demonstration purposes. We can't guarantee that it will work in all usage scenarios. If you need to add some functionality to it, feel free to do this on your own. Researching DevExpress source code will help you with this task. Also, refer to the following help topic for more information: [Debug DevExpress .NET Source Code with Debug Symbols](https://docs.devexpress.com/GeneralInformation/403656/support-debug-troubleshooting/debug-controls-with-debug-symbols). Unfortunately extending this example with custom code is outside the scope of our Support Service: [Technical Support Scope](https://www.devexpress.com/products/net/application_framework/xaf-considerations-for-newcomers.xml#support).
+
+
+
 ## Summary
 
 We created a custom XAF Property Editor based on our [DxTagBox](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxTagBox-2) component. For more information, review the following concepts:
