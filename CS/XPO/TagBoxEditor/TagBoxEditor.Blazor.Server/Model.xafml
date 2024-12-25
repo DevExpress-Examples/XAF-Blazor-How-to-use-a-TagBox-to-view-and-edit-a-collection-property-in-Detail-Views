@@ -7,17 +7,17 @@
   <Views DefaultListEditor="DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor">
     <DetailView Id="Department_DetailView">
       <Items>
-        <PropertyEditor Id="Employees" PropertyEditorType="TagBoxPropertyEditorSample.Module.Blazor.Editors.TagBoxPropertyEditor" />
+        <PropertyEditor Id="Employees" PropertyEditorType="TagBoxEditor.Blazor.Server.Editors.TagBoxPropertyEditor" />
       </Items>
     </DetailView>
     <DetailView Id="Employee_DetailView">
       <Items>
-        <PropertyEditor Id="Tasks" PropertyEditorType="TagBoxPropertyEditorSample.Module.Blazor.Editors.TagBoxPropertyEditor" />
+        <PropertyEditor Id="Tasks" PropertyEditorType="TagBoxEditor.Blazor.Server.Editors.TagBoxPropertyEditor" />
       </Items>
     </DetailView>
     <DetailView Id="MyTask_DetailView">
       <Items>
-        <PropertyEditor Id="Employees" PropertyEditorType="TagBoxPropertyEditorSample.Module.Blazor.Editors.TagBoxPropertyEditor" />
+        <PropertyEditor Id="Employees" PropertyEditorType="TagBoxEditor.Blazor.Server.Editors.TagBoxPropertyEditor" />
       </Items>
     </DetailView>
   </Views>
